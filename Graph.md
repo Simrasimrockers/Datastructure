@@ -117,10 +117,32 @@ int main() {
     BFS(graph, visited, 0, vertices);
     printf("\n");
 
+
     return 0;
 }
 
 ```
+**Problem Statement: Simple Social Network Model in C**
 
+Design a simple social network model in C using an undirected graph. In this network:
+- Each person is represented as a node (or vertex).
+- Each friendship between two people is represented as an undirected edge between their respective nodes.
 
+**Requirements:**
+1. **Graph Representation**: Use an adjacency list to represent the graph structure.
 
+2. **Core Functions**:
+   - **`addFriend(int user1, int user2)`**: Establish a friendship between `user1` and `user2`. This function should create an undirected edge between the two users, indicating a friendship. Self-friendships (i.e., a user being friends with themselves) should not be allowed.
+   
+   - **`viewConnections(int user)`**: List all direct friends of a given user.
+   
+   - **`suggestFriends(int user)`**: Suggest potential friends for the given user based on mutual connections. A mutual friend is defined as someone who is a friend of a friend but not a direct friend of the user.
+
+3. **Program Execution**:
+   - Input the number of users in the network.
+   - Input an initial list of friendships to initialize the graph.
+   - Display a menu allowing the user to:
+     1. View friends of a specific user.
+     2. Add a new friendship between two users.
+     3. Get friend suggestions for a user based on mutual connections.
+---
